@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
-import HighlightText from "./HighlightText";
-import CTAButton from "./Button";
-import Banner from "../../../assets/Images/banner.mp4";
-import CodeBlocks from "./CodeBlocks";
-import TimelineSection from "./TimelineSection";
-import LearningLanguageSection from "./LearningLanguageSection";
-import InstructorSection from "./InstructorSection";
-import Footer from "../../common/Footer";
+import HighlightText from "../components/core/HomePage/HighlightText";
+import CTAButton from "../components/core/HomePage/Button";
+import Banner from "../assets/Images/banner.mp4";
+import CodeBlocks from "../components/core/HomePage/CodeBlocks";
+import TimelineSection from "../components/core/HomePage/TimelineSection";
+import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
+import InstructorSection from "../components/core/HomePage/InstructorSection";
+import Footer from "../components/common/Footer";
+import ExploreMore from "../components/core/HomePage/ExploreMore";
 const Home = () => {
   return (
     <div>
@@ -129,6 +130,7 @@ const Home = () => {
             backgroundGradient={<div className="codeblock2 absolute"></div>}
           />
         </div>
+        <ExploreMore/>
       </div>
 
       {/* Section 2  */}

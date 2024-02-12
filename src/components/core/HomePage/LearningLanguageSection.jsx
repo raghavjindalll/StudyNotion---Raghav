@@ -21,7 +21,7 @@ const LearningLanguageSection = () => {
         <img src={compare_with_others} alt="" className='object-contain'/>
         <img src={plan_your_lessons} alt="" className='object-contain -ml-36'/>
         </div>
-      <div className='w-fit'>
+      <div className='w-fit mb-32'>
         <Button active={true} linkto={"/signup"}>
             <div>
                 Learn More
