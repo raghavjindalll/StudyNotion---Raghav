@@ -131,7 +131,7 @@ export function getPasswordResetToken(email, setEmailSent) {
         email,
       });
 
-      console.log("RESETPASSTOKEN RESPONSE............", response);
+      console.log("RESET PASSTOKEN RESPONSE............", response);
 
       if (!response.data.success) {
         throw new Error(response.data.message);
