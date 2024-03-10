@@ -1,10 +1,9 @@
-import { toast } from "react-hot-toast";
-
 import { setLoading, setToken } from "../../slices/authSlice";
 import { resetCart } from "../../slices/cartSlice";
 import { setUser } from "../../slices/profileSlice";
 import { apiConnector } from "../apiConnector";
-import { endpoints } from "../api";
+import { endpoints } from "../apis";
+import { toast } from "react-hot-toast";
 
 const {
   SENDOTP_API,
@@ -19,18 +18,12 @@ export function sendOtp(email, navigate) {
     const toastId = toast.loading("Loading...");
     dispatch(setLoading(true));
     try {
-      const bodyData = {
-        email: email,
+      const response = await apiConnector("POST", SENDOTP_API, {
+        email,
         checkUserPresent: true,
-      };
-      const response = await apiConnector(
-        "POST",
-        SENDOTP_API,
-        bodyData,        
-        null,
-        null
-      );
+      });
       console.log("SENDOTP API RESPONSE............", response);
+
       console.log(response.data.success);
 
       if (!response.data.success) {
@@ -131,7 +124,7 @@ export function getPasswordResetToken(email, setEmailSent) {
         email,
       });
 
-      console.log("RESET PASSTOKEN RESPONSE............", response);
+      console.log("RESETPASSTOKEN RESPONSE............", response);
 
       if (!response.data.success) {
         throw new Error(response.data.message);

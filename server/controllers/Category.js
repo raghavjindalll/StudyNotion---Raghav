@@ -110,6 +110,7 @@ exports.categoryPageDetails = async (req, res) => {
         mostSellingCourses,
       },
     });
+    
   } catch (error) {
     return res.status(500).json({
       success: false,

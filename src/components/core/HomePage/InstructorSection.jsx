@@ -6,7 +6,7 @@ import HighlightText from './HighlightText';
 
 const InstructorSection = () => {
   return (
-    <div className=''>
+    <div>
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           <div className="lg:w-[50%]">
             <img
